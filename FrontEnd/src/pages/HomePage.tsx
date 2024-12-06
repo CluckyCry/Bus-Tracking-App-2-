@@ -5,10 +5,10 @@ import { MapPin, Bus, Navigation } from 'lucide-react';
 const HomePage: React.FC = () => {
   return (
     <div className="homepage bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex flex-col items-center justify-center px-4 py-12">
-      <div className="max-w-md w-full bg-white shadow-2xl rounded-2xl p-8 text-center transform transition-all hover:scale-105 hover:shadow-3xl">
+      <div className="max-w-md w-full bg-white shadow-2xl rounded-2xl p-8 text-center transform transition-all hover:scale-105 hover:shadow-3xl ">
         <div className="mb-6 flex justify-center items-center space-x-4">
-          <Bus className="text-blue-600 w-12 h-12" />
-          <h1 className="text-4xl font-extrabold text-gray-800">
+          <Bus className="text-blue-600 w-12 h-12 " />
+          <h1 className="text-4xl font-extrabold text-gray-800 ">
             Bus Tracker
           </h1>
         </div>
