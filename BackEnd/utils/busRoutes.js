@@ -30,8 +30,8 @@ waypoints: [
       { latitude: 24.9380, longitude: 67.2050, sequence: 15 },
       { latitude: 24.9400, longitude: 67.2100, sequence: 16 },
       { latitude: 24.9420, longitude: 67.2150, sequence: 17 },
-      { latitude: 24.9440, longitude: 67.2200, sequence: 18 },
-      { latitude: 24.9460, longitude: 67.2250, sequence: 19 },
+      { latitude: 24.833730, longitude: 67.2200, sequence: 18 },  
+      { latitude: 24.833392, longitude: 66.971837, sequence: 19 },  
       { latitude: 24.833093, longitude: 66.971648, sequence: 20 },
         
       ]
@@ -70,7 +70,7 @@ waypoints: [
       { latitude: 24.9420, longitude: 67.2150, sequence: 17 },
       { latitude: 24.9440, longitude: 67.2200, sequence: 18 },
       { latitude: 24.9460, longitude: 67.2250, sequence: 19 },
-      { latitude: 24.833093, longitude: 66.971648, sequence: 20 },
+      { latitude: 24.833093, longitude: 66.971648, sequence: 20 },]
     },
     {
       id: 3,
