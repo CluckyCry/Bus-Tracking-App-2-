@@ -362,20 +362,46 @@ const routes = [
         longitude: 66.995209,
       },
     ],
-  },
+  }, //9 ana hai
   {
     id: 9,
     start: "Gulshan e Hadeed",
     end: "Tower",
     distance_km: 42,
-    start_location: {
-      latitude: 24.7892,
-      longitude: 67.2066,
+    start_location: { 
+      latitude: 24.871035,
+      longitude:  67.372195,
     },
-    end_location: {
-      latitude: 24.85,
-      longitude: 67.0113,
+    end_location: {  
+      latitude: 24.846993,
+      longitude: 66.993904,
     },
+    
+    waypoints: [
+      { "sequence": 1, "latitude": 24.864258,  "longitude": 67.349962 },
+      { "sequence": 2, "latitude":  24.860168, "longitude":  67.334441 },
+      { "sequence": 3, "latitude": 24.859249, "longitude":  67.272122 }, 
+      { "sequence": 4, "latitude": 24.854074,"longitude":  67.244323}, 
+      { "sequence": 5, "latitude": 24.858811, "longitude": 67.208417},  
+      { "sequence": 6, "latitude":24.869619, "longitude": 67.200188},  
+      { "sequence": 7, "latitude": 24.884510, "longitude":  67.175418},  
+      { "sequence": 8, "latitude": 24.887104, "longitude":  67.130080 }, 
+      { "sequence": 9, "latitude": 24.884176, "longitude": 67.116339 }, 
+      { "sequence": 10, "latitude": 24.876553, "longitude":   67.101895},
+
+      { "sequence": 11, "latitude": 24.873596,  "longitude":  67.093605},
+      { "sequence": 12, "latitude": 24.869579,"longitude": 67.087442 }, 
+      { "sequence": 13, "latitude": 24.865899, "longitude":   67.079926},
+      { "sequence": 14, "latitude":24.861293, "longitude": 67.067092}, 
+      { "sequence": 15, "latitude":24.859234,  "longitude":67.052472}, 
+      { "sequence": 16, "latitude": 24.855335,"longitude":  67.038675 },
+      { "sequence": 17, "latitude": 24.849693, "longitude": 67.030386},  
+      { "sequence": 18, "latitude": 24.853717, "longitude": 67.026373}, 
+      { "sequence": 19, "latitude": 24.849999, "longitude": 67.010076 },
+      { "sequence": 20, "latitude": 24.846993, "longitude": 66.993904 } 
+
+    ]
+  
   },
   {
     id: 10,
@@ -531,19 +557,46 @@ const routes = [
       },
     ],
   },
+  
   {
     id: 11,
-    start: "Shireen Jinnah Colony",
+    start: "Shireen Jinnah Colony", 
     end: "Miran Nakka Lyari",
     distance_km: 19,
     start_location: {
-      latitude: 24.8141,
-      longitude: 67.0331,
+      latitude:24.8172752,  
+      longitude: 67.0071251,
     },
     end_location: {
-      latitude: 24.8724,
-      longitude: 67.0101,
+      latitude: 24.878276,  
+      longitude: 66.995147,
     },
+    waypoints: [
+      { "sequence": 1, "latitude": 24.817107,  "longitude": 67.015543 },
+      { "sequence": 2, "latitude":  24.815229, "longitude":  67.021209}, 
+      { "sequence": 3, "latitude": 24.813011, "longitude":  67.027805}, 
+      { "sequence": 4, "latitude":24.809143,"longitude":  67.034351}, 
+      { "sequence": 5, "latitude": 24.805423, "longitude": 67.040354},  
+      { "sequence": 6, "latitude":24.812640, "longitude":   67.047289}, 
+      { "sequence": 7, "latitude":  24.816828,"longitude":  67.051319},  
+      { "sequence": 8, "latitude": 24.819784, "longitude":  67.047677 }, 
+      { "sequence": 9, "latitude": 24.824053, "longitude": 67.044553},  
+      { "sequence": 10, "latitude": 24.829756, "longitude":    67.041225},
+
+      { "sequence": 11, "latitude": 24.835425,  "longitude":  67.037237}, 
+      { "sequence": 12, "latitude": 24.841348,"longitude": 67.032253}, 
+      { "sequence": 13, "latitude": 24.846713,  "longitude":   67.024883},
+      { "sequence": 14, "latitude":24.843135, "longitude": 67.011805},  
+      { "sequence": 15, "latitude":24.845110,  "longitude":66.998538},  
+      { "sequence": 16, "latitude": 24.852196,"longitude":  66.987981 }, 
+      { "sequence": 17, "latitude":24.861798, "longitude": 66.987074},  
+      { "sequence": 18, "latitude": 24.867333,  "longitude": 66.981986},
+      { "sequence": 19, "latitude": 24.873815, "longitude":  66.982412 },
+      { "sequence": 20, "latitude": 24.877492, "longitude": 66.990998 },
+      { "sequence": 21, "latitude": 24.878276, "longitude": 66.995147 }  
+
+
+    ]
   },
   {
     id: 12,
