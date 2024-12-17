@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import BusMap from "./BusMap";
+import { disposedError } from "ol/DataTile";
 
 interface Waypoint {
   latitude: number;
@@ -53,16 +54,18 @@ const BusTracker: React.FC = () => {
   // Manage bus movement with intervals
   useEffect(() => {
     if (!routes.length || !buses.length) return;
-    const updateBuses = () => {
-      const updatedBuses = busesRef.current.map((bus) => {
-        const route = routes.find((route) => route.id === bus.id);
-        if (!route) return bus;
+    busesRef.current.forEach((bus, ind) => {
+      const route = routes.find((route) => route.id === bus.id);
+      if (!route) return;
+      // sequence, direction, & waypoints:
+      let currentSequence = bus.currentSequence;
+      let direction = bus.direction;
+      let waypoints = route.waypoints;
 
-        const waypoints = route.waypoints;
-        let currentSequence = bus.currentSequence;
-        let direction: "forward" | "backward" = bus.direction;
-
-        // Update sequence and direction
+      const intervalTime = (30*60*1000) / waypoints.length; // (making sure the bus reaches its destination in 30 minutes)
+      // Setting up interval:
+      setInterval(() => {
+        // navigation
         if (direction === "forward") {
           if (currentSequence < waypoints.length - 1) {
             currentSequence++;
@@ -74,26 +77,28 @@ const BusTracker: React.FC = () => {
           if (currentSequence > 0) {
             currentSequence--;
           } else {
-            direction = "forward";
             currentSequence++;
+            direction = "forward";
           }
         }
 
-        return {
-          ...bus,
-          coordinates: waypoints[currentSequence],
-          currentSequence,
-          direction,
-        };
-      });
-
-      busesRef.current = updatedBuses;
-      setBuses(updatedBuses);
-    };
-    const intervalId = setInterval(updateBuses, 5000);
-    // Cleanup interval on component unmount
-    return () => clearInterval(intervalId);
-  }, [routes, buses]);
+        // setting buses:
+        const updatedBuses = busesRef.current.map((bus) => {
+          if (bus.id === route.id) {
+            return {
+              ...bus,
+              currentSequence,
+              direction,
+              coordinates: waypoints[currentSequence],
+            };
+          } else return bus;
+        });
+        // now here, we update the busesRef and the state:
+        busesRef.current = updatedBuses;
+        setBuses(updatedBuses);
+      }, intervalTime);
+    });
+  }, [routes]);
 
   return (
     <div>
